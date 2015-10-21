@@ -485,8 +485,7 @@ for i in range(nonbondedForce.getNumParticles()):
     nonbondedForce.setParticleParameters(i, q, sig, eps*0)
 for i in range(nonbondedForce.getNumExceptions()):
     (p1, p2, q, sig, eps) = nonbondedForce.getExceptionParameters(i)
-    if eps._value == 0.0:
-        customNonbondedForce.addExclusion(p1, p2)
+    customNonbondedForce.addExclusion(p1, p2)
 
 """)
 print(' </Script>')
